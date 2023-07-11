@@ -3,17 +3,47 @@ name: Python
 on: workflow_dispatch
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build1:
+    runs-on: ubuntu-lastest
     strategy:
       matrix:
         python-version: ["3.8"]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: python -c "import sys; print(sys.version)" > bob_study1.txt
+      - name: study
+        uses: actions/upload-artifact@v1
+        with: 
+          name: python3.8
+          path: bob_study1.txt
+        
+  build2:
+    runs-on: ubuntu-lastest
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+
+    steps:
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)" > bob_study2.txt
+      - name: study
+        uses: actions/upload-artifact@v1
+        with: 
+          name: python3.9
+          path: bob_study2.txt
+
+  build3:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+
+    steps:
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)" > bob_study3.txt
+      - name: study
+        uses: actions/upload-artifact@v1
+        with: 
+          name: python3.10
+          path: bob_study3.txt
