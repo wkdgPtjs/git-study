@@ -16,12 +16,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob1.txt
-      - name: bob
+        run: python -c "import sys; print(sys.version)" > git_study1.txt
+      - name: git
         uses: actions/upload-artifact@v1
         with:
           name: python3.8
-          path: bob1.txt
+          path: git_study1.txt
 
 
   build2:
@@ -37,12 +37,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob2.txt
-      - name: bob
+        run: python -c "import sys; print(sys.version)" > git_study2.txt
+      - name: git
         uses: actions/upload-artifact@v1
         with:
           name: python3.9
-          path: bob2.txt
+          path: git_study2.txt
         
   build3:
     runs-on: ubuntu-latest
@@ -57,9 +57,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob3.txt
-      - name: bob
+        run: python -c "import sys; print(sys.version)" > git_study3.txt
+      - name: git
         uses: actions/upload-artifact@v1
         with:
           name: python3.10
-          path: bob3.txt
+          path: git_study3.txt
