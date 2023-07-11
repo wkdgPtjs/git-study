@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob_study1.txt
+        run: python -c "import sys; print(sys.version)" > bob-study1.txt
       - name: study
         uses: actions/upload-artifact@v1
         with: 
           name: python3.8
-          path: bob_study1.txt
+          path: bob-study1.txt
         
   build2:
     runs-on: ubuntu-lastest
@@ -26,12 +26,12 @@ jobs:
 
     steps:
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob_study2.txt
+        run: python -c "import sys; print(sys.version)" > bob-study2.txt
       - name: study
         uses: actions/upload-artifact@v1
         with: 
           name: python3.9
-          path: bob_study2.txt
+          path: bob-study2.txt
 
   build3:
     runs-on: ubuntu-latest
@@ -41,9 +41,9 @@ jobs:
 
     steps:
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob_study3.txt
+        run: python -c "import sys; print(sys.version)" > bob-study3.txt
       - name: study
         uses: actions/upload-artifact@v1
         with: 
           name: python3.10
-          path: bob_study3.txt
+          path: bob-study3.txt
