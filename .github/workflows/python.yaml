@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   build1:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.8"]
@@ -16,15 +16,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob-study1.txt
-      - name: study
+        run: python -c "import sys; print(sys.version)" > bob1.txt
+      - name: bob
         uses: actions/upload-artifact@v1
-        with: 
+        with:
           name: python3.8
-          path: bob-study1.txt
-        
+          path: bob1.txt
+
+
   build2:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.9"]
@@ -36,13 +37,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob-study2.txt
-      - name: study
+        run: python -c "import sys; print(sys.version)" > bob2.txt
+      - name: bob
         uses: actions/upload-artifact@v1
-        with: 
+        with:
           name: python3.9
-          path: bob-study2.txt
-
+          path: bob2.txt
+        
   build3:
     runs-on: ubuntu-latest
     strategy:
@@ -56,9 +57,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > bob-study3.txt
-      - name: study
+        run: python -c "import sys; print(sys.version)" > bob3.txt
+      - name: bob
         uses: actions/upload-artifact@v1
-        with: 
+        with:
           name: python3.10
-          path: bob-study3.txt
+          path: bob3.txt
