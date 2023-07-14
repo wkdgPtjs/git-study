@@ -55,3 +55,13 @@ jobs: //수행 작업 정의
           path: git_study1.txt
   }
 </code></pre>
+
+### 결과
+- workflows를 실행하면 아래와 같이 빌드가 되고 결과물이 파일로 저장된다.
+![image](https://github.com/wkdgPtjs/git-study/assets/138555078/a7379c83-903e-4ee2-8008-75d12d7f6803)
+![image](https://github.com/wkdgPtjs/git-study/assets/138555078/cd7544f2-bf0a-4bb0-a515-e8c09ae34f62)
+
+- 파일 내용
+
+![image](https://github.com/wkdgPtjs/git-study/assets/138555078/5dfb4ed7-5984-45fe-b85f-a338f49de788)
+
